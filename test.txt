@@ -1,0 +1,33 @@
+This is a git test file.
+GIT is very dicullt but I can do it.
+GIT is a distributed Version Control System(VCS).
+
+Second Edition: Add to confirm the letter
+This is my response on your letter.
+
+def mul():
+    c = a*b
+
+def test_01():
+    c = a + b
+    print(c)
+
+def branch_lht():
+    
+아 까 세번째 입력 및 삭제가 반영되;지 않았네요 마스터 브렌치에서는요???
+=======
+Git 시험용으로 2줄 삭제합니다.
+
+git 시험용 입력 자료입니다.
+Test Branch에서 두번째 작성합니다. 
+
+git 시험용 입력 자료입니다.
+Test Branch에서 두번째 작성합니다. 
+
+git master branch에서 시험입력 합니다. 
+아마도 Conflict 발생할 듯
+
+
+
+=======
+>>>>>>> test
