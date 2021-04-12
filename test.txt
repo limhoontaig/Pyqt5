@@ -31,3 +31,5 @@ git master branch에서 시험입력 합니다.
 
 =======
 >>>>>>> test
+
+git lenova notebook에서 연결함
