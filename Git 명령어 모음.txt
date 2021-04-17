@@ -53,7 +53,6 @@ Other
 git config —global user.name “limhoontaig”
 git config —global user.email “limhoontaig@gmail.com”
 
-
 Uncontrolled area to staging area
 git config --list
 
@@ -90,14 +89,10 @@ usage: git add [<options>] [--] <pathspec>...
                           read pathspec from file
     --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
 
-
-<<<<<<< HEAD
 git add —all git add filename
-=======
 git add —all git add filename # add all files on local git repository
 git add <filename> # add file to local depository 
 git add .  #add files on current directory
->>>>>>> test
 
 
 Registered on local Repository
@@ -109,6 +104,8 @@ git remote add origin <“Remote Repository URL”>
 https://github.com/limhoontaig/Pyqt5.git
 
 git push –u origin master 
-
+git push -fu origin master # force upload
 
 git branch
+
+git clone <Remote Repository URL>
