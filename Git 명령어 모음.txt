@@ -1,0 +1,92 @@
+GIT 사용하기
+
+work space 
+
+git init
+
+
+
+usage: git config [<options>]
+
+Config file location
+--global              use global config file
+--system              use system config file
+--local               use repository config file
+--worktree            use per-worktree config file
+-f, --file <file>     use given config file
+--blob <blob-id>      read config from given blob object
+
+Action
+--get                 get value: name [value-pattern]
+--get-all             get all values: key [value-pattern]
+--get-regexp          get values for regexp: name-regex [value-pattern]
+--get-urlmatch        get value specific for the URL: section[.var] URL
+--replace-all         replace all matching variables: name value [value-pattern]
+--add                 add a new variable: name value
+--unset               remove a variable: name [value-pattern]
+--unset-all           remove all matches: name [value-pattern]
+--rename-section      rename section: old-name new-name
+--remove-section      remove a section: name
+-l, --list            list all
+--fixed-value         use string equality when comparing values to 'value-pattern'
+-e, --edit            open an editor
+--get-color           find the color configured: slot [default]
+--get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+-t, --type <>         value is given this type
+--bool                value is "true" or "false"
+--int                 value is decimal number
+--bool-or-int         value is --bool or --int
+--bool-or-str         value is --bool or string
+--path                value is a path (file or directory name)
+--expiry-date         value is an expiry date
+
+Other
+-z, --null            terminate values with NUL byte
+--name-only           show variable names only
+--includes            respect include directives on lookup
+--show-origin         show origin of config (file, standard input, blob, command line)
+--show-scope          show scope of config (worktree, local, global, system, command)
+--default <value>     with --get, use default value when missing entry
+
+git config —global user.name “limhoontaig”
+git config —global user.email “limhoontaig@gmail.com”
+
+
+
+Uncontrolled area to staging area
+
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    --renormalize         renormalize EOL of tracked files (implies -u)
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+    --chmod (+|-)x        override the executable bit of the listed files
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+git add —all git add filename
+
+
+Registered on local Repository
+git commit –m “with comment”
+
+git remote add origin “Remote Repository URL”
+https://github.com/limhoontaig/Pyqt5.git
+
+git push –u origin master 
