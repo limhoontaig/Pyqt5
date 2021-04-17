@@ -118,3 +118,15 @@ git clone -b <branch-name> <address>
 remote 저장소에 있는 모든 branch를 local 저장소에 가져와야할 필요할때
 how to clone all remote branches to local branches in git
 git checkout master ; remote=origin ; for brname in `git branch -r | grep $remote | grep -v master | grep -v HEAD | awk '{gsub(/^[^\/]+\//,"",$1); print $1}'`; do git branch -D $brname ; git checkout -b $brname $remote/$brname ; done ; git checkout master ;
+
+git log --graph -- oneline
+
+git reset --<hard | soft | mixed> 
+Caution --hard : git repository reset everything
+
+
+git revert : only change the git history
+
+git cat-file -p HEAD
+
+git ls-tree -r HEAD
