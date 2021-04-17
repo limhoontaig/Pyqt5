@@ -54,8 +54,19 @@ git config —global user.name “limhoontaig”
 git config —global user.email “limhoontaig@gmail.com”
 
 
-
 Uncontrolled area to staging area
+git config --list
+
+git config --list | grep "user.name"
+user.name=limhoontaig
+
+cat ~/.gitconfig
+[user]
+        name = limhoontaig
+        email = limhoontaig@gmail.com
+
+
+Uncontrolled files to upload staging area
 
 usage: git add [<options>] [--] <pathspec>...
 
@@ -80,7 +91,13 @@ usage: git add [<options>] [--] <pathspec>...
     --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
 
 
+<<<<<<< HEAD
 git add —all git add filename
+=======
+git add —all git add filename # add all files on local git repository
+git add <filename> # add file to local depository 
+git add .  #add files on current directory
+>>>>>>> test
 
 
 Registered on local Repository
