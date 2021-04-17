@@ -102,8 +102,13 @@ git add .  #add files on current directory
 
 Registered on local Repository
 git commit –m “with comment”
+git commit -am "commit message"
+git commit -am "first issue"
 
-git remote add origin “Remote Repository URL”
+git remote add origin <“Remote Repository URL”>
 https://github.com/limhoontaig/Pyqt5.git
 
 git push –u origin master 
+
+
+git branch
