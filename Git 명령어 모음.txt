@@ -106,6 +106,15 @@ https://github.com/limhoontaig/Pyqt5.git
 git push –u origin master 
 git push -fu origin master # force upload
 
-git branch
+git branch -a # all git remote repository branches list 
 
 git clone <Remote Repository URL>
+
+git clone을 하게되면 기본적으로 master 브랜치를 받게된다. 
+그리고 나서 브랜치를 이동하게되는데 
+처음부터 특정 브랜치를 clone 받고 싶을때는
+git clone -b <branch-name> <address>
+
+remote 저장소에 있는 모든 branch를 local 저장소에 가져와야할 필요할때
+how to clone all remote branches to local branches in git
+git checkout master ; remote=origin ; for brname in `git branch -r | grep $remote | grep -v master | grep -v HEAD | awk '{gsub(/^[^\/]+\//,"",$1); print $1}'`; do git branch -D $brname ; git checkout -b $brname $remote/$brname ; done ; git checkout master ;
