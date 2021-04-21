@@ -1,6 +1,6 @@
-def split():
-    splited = split("naver.com",".")
+def split(x):
+    splited = x.split(".")
     return splited
 
-split()
-print(spilited)
+y = split("naver.com")
+print(y)
