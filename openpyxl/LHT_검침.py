@@ -31,3 +31,10 @@ for x in range(1, ws.max_row + 1):
     for y in range(1,  ws.max_row + 1):
         print(ws.cell(row=x, column=y).value, end=" ")
     print()
+
+
+station = ['사당','신도림','인천공항']
+
+for i in station:
+    print(i+'행 열차가 들어오고있습니다.')
+
