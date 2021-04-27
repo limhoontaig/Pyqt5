@@ -11,9 +11,9 @@ class MyApp(QMainWindow):
         self.initUI()
 
     def initUI(self):
-        self.statusBar().showMessage('Ready')
+        self.statusBar().showMessage('Ready to go')
 
-        self.setWindowTitle('Statusbar')
+        self.setWindowTitle('Statusbar for who')
         self.setGeometry(300, 300, 300, 200)
         self.show()
 
