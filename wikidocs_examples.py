@@ -88,21 +88,46 @@
 
 # Example 9
 
-f = open('sample.txt','r')
-lines = f.readlines()
-f.close()
-total = 0
-i = 0
-for n in lines:
-    total += int(n)
-    i += 1
-average = total / len(lines)
-print('Total =', total,'Avergae = ',average, total / i)
+# f = open('sample.txt','r')
+# lines = f.readlines()
+# f.close()
+# total = 0
+# i = 0
+# for n in lines:
+#     total += int(n)
+#     i += 1
+# average = total / len(lines)
+# print('Total =', total,'Avergae = ',average, total / i)
 
-f = open('result.txt','a')
+# f = open('result.txt','a')
 
-for line in lines:
-    f.write(line)
-f.write('\n')
-f.write('Average : %d\n' % average)
-f.write('Total : %d\n' % total)
+# for line in lines:
+#     f.write(line)
+# f.write('\n')
+# f.write('Average : %d\n' % average)
+# f.write('Total : %d\n' % total)
+
+# Example 10
+
+class Calculator:
+    def __init__(self, numberlist):
+        self.numberlist = numberlist
+    
+    def sum(self):
+        result = 0
+        for num in self.numberlist:
+            result += num
+        return result
+    
+    def avg(self):
+        total = self.sum()
+        return total / len(self.numberlist)
+
+call1 = Calculator([1,2,3,4,5,0.222,0.546])
+print(call1.sum())
+print(call1.avg())
+
+call2 = Calculator([6,7,8,9,10,1000,50000])
+print(call2.sum())
+print(call2.avg())
+
