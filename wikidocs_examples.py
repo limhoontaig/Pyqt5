@@ -161,23 +161,57 @@
 
 #Example 13 Dashinsert function
  
-data = '454679358966842358'
-numbers = list(map(int, data))
-result = []
-print(numbers)
+# data = '454679358966842358'
+# numbers = list(map(int, data))
+# result = []
+# print(numbers)
 
-for i, num in enumerate(numbers):
-    result.append(str(num))
-    if i < len(numbers)-1:
-        is_odd = num % 2 == 1
-        is_next_odd = numbers[i+1] % 2 == 1
-        if is_odd and is_next_odd:
-            result.append('-')
-        elif not is_odd and not is_next_odd:
-            result.append('*')
-print(result)
-print(''.join(result))
+# for i, num in enumerate(numbers):
+#     result.append(str(num))
+#     if i < len(numbers)-1:
+#         is_odd = num % 2 == 1
+#         is_next_odd = numbers[i+1] % 2 == 1
+#         if is_odd and is_next_odd:
+#             result.append('-')
+#         elif not is_odd and not is_next_odd:
+#             result.append('*')
+# print(result)
+# print(''.join(result))
 
-        
+# Example 14 compress string
 
+# def compress_string(s):
+#     _c = ''
+#     cnt = 0
+#     result = ''
+#     for c in s:
+#         if c!=_c:
+#             _c = c
+#             if cnt: result += str(cnt)
+#             result += c
+#             cnt = 1
+#         else:
+#             cnt += 1
+#     if cnt: result += str(cnt)
+#     return result
+# print(compress_string('aaabbcccccca'))
+
+# Example 14 Duplicate numbers
+
+def chkDupNum(s):
+    result = []
+    for num in s:
+        if num not in result:
+            result.append(num)
+            #print(result)
+        else:
+            return False
+    #print(result)
+    return len(result) == 10
+
+print(chkDupNum('0123456789'))
+print(chkDupNum('01234'))
+print(chkDupNum('01234567890'))
+print(chkDupNum('6789012345'))
+print(chkDupNum('012322456789'))
         
