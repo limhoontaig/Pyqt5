@@ -71,17 +71,38 @@
 #     print(i,'*',dan,'=',i*dan)#,end=' ')
 
 # Example 8
-f = open('abc.txt', 'r', encoding='UTF-8')
+# f = open('abc.txt', 'r', encoding='UTF-8')
+# lines = f.readlines()
+# f.close()
+
+# lines.reverse()
+
+# f = open('abc.txt','w',encoding = 'UTF-8')
+# for line in lines:
+#     line = line.strip()
+#     print(line)
+#     f.write(line)
+#     f.write('\n')
+
+# f.close()
+
+# Example 9
+
+f = open('sample.txt','r')
 lines = f.readlines()
 f.close()
+total = 0
+i = 0
+for n in lines:
+    total += int(n)
+    i += 1
+average = total / len(lines)
+print('Total =', total,'Avergae = ',average, total / i)
 
-lines.reverse()
+f = open('result.txt','a')
 
-f = open('abc.txt','w',encoding = 'UTF-8')
 for line in lines:
-    line = line.strip()
-    print(line)
     f.write(line)
-    f.write('\n')
-
-f.close()
+f.write('\n')
+f.write('Average : %d\n' % average)
+f.write('Total : %d\n' % total)
