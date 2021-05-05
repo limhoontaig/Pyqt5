@@ -109,25 +109,37 @@
 
 # Example 10
 
-class Calculator:
-    def __init__(self, numberlist):
-        self.numberlist = numberlist
+# class Calculator:
+#     def __init__(self, numberlist):
+#         self.numberlist = numberlist
     
-    def sum(self):
-        result = 0
-        for num in self.numberlist:
-            result += num
-        return result
+#     def sum(self):
+#         result = 0
+#         for num in self.numberlist:
+#             result += num
+#         return result
     
-    def avg(self):
-        total = self.sum()
-        return total / len(self.numberlist)
+#     def avg(self):
+#         total = self.sum()
+#         return total / len(self.numberlist)
 
-call1 = Calculator([1,2,3,4,5,0.222,0.546])
-print(call1.sum())
-print(call1.avg())
+# call1 = Calculator([1,2,3,4,5,0.222,0.546])
+# print(call1.sum())
+# print(call1.avg())
 
-call2 = Calculator([6,7,8,9,10,1000,50000])
-print(call2.sum())
-print(call2.avg())
+# call2 = Calculator([6,7,8,9,10,1000,50000])
+# print(call2.sum())
+# print(call2.avg())
+
+# Example 11 Module Path
+# import sys method
+# import sys
+# sys.path.append('c:/resource/PyQt5')
+# import mymod
+
+# PythonPath 환경변수 사용하기
+# c:\resource\PyQt5>set PYTHONPATH =c:\resource\PyQt5
+
+# to operate python on python program module in directory
+
 
