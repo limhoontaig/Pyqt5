@@ -68,18 +68,20 @@
 # user_input = input('구구단을 출력할 숫자를 입력 하세요(2~9):')
 # dan = int(user_input)
 # for i in range(1, 10):
-#     print(i,'*',dan,'=',i*dan,end=' ')
+#     print(i,'*',dan,'=',i*dan)#,end=' ')
 
 # Example 8
-f = open('abc.txt', 'r')
+f = open('abc.txt', 'r', encoding='UTF-8')
 lines = f.readlines()
 f.close()
 
 lines.reverse()
 
-f = open('abc.txt','w')
+f = open('abc.txt','w',encoding = 'UTF-8')
 for line in lines:
     line = line.strip()
+    print(line)
     f.write(line)
-    f.write('/n')
+    f.write('\n')
+
 f.close()
