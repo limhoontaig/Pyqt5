@@ -32,6 +32,12 @@ class file_control():
                 data.append(line)
         return data
 
+    def file_write(data):
+        with open('outfile', 'wt') as out:
+            out.write(data)
+
+
+
     # def headers(data):
     #     headers = next(data)
     #     return headers
@@ -44,6 +50,8 @@ class file_control():
 data = file_control.file_open('data/dowstocks.csv')
 # header = file_control.headers(data)
 file_control.print(data)
+file_control.file_write(data)
+
 
 
 
