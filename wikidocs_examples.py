@@ -217,20 +217,31 @@
 
 # Example 16 Morse
 
-dic = {
-    '.-':'A','-...':'B','-.-.':'C','-..':'D','.':'E','..-.':'F',
-    '--.':'G','....':'H','..':'I','.---':'J','-.-':'K','.-..':'L',
-    '--':'M','-.':'N','---':'O','.--.':'P','--.-':'Q','.-.':'R',
-    '...':'S','-':'T','..-':'U','...-':'V','.--':'W','-..-':'X',
-    '-.--':'Y','--..':'Z'
-}
+# dic = {
+#     '.-':'A','-...':'B','-.-.':'C','-..':'D','.':'E','..-.':'F',
+#     '--.':'G','....':'H','..':'I','.---':'J','-.-':'K','.-..':'L',
+#     '--':'M','-.':'N','---':'O','.--.':'P','--.-':'Q','.-.':'R',
+#     '...':'S','-':'T','..-':'U','...-':'V','.--':'W','-..-':'X',
+#     '-.--':'Y','--..':'Z'
+# }
 
-def morse(src):
-    result = []
-    for word in src.split('  '):
-        for char in word.split(' '):
-            result.append(dic[char])
-        result.append(' ')
-    return ''.join(result)
+# def morse(src):
+#     result = []
+#     for word in src.split('  '):
+#         for char in word.split(' '):
+#             result.append(dic[char])
+#         result.append(' ')
+#     return ''.join(result)
 
-print(morse('.... .  ... .-.. . . .--. ...  . .- .-. .-.. -.--'))
+# print(morse('.... .  ... .-.. . . .--. ...  . .- .-. .-.. -.--'))
+
+# Example 17 RegularExpression
+
+import re
+
+p = re.compile("a[.]{3,}b")
+
+print (p.match("acccb"))    # None
+print (p.match("a....b"))   # 매치 객체 출력
+print (p.match("aaab"))     # None
+print (p.match("a.cccb"))   # None
