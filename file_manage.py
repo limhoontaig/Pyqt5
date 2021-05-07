@@ -38,9 +38,9 @@ class file_control():
 
 
 
-    # def headers(data):
-    #     headers = next(data)
-    #     return headers
+    def headers(data):
+        headers = next(data)
+        return headers
 
     def print(data):
         for d in data:
