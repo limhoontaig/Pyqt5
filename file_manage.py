@@ -1,17 +1,17 @@
 from time import time
 import os
 
-path = os.getcwd()
-file_name = path + '/' + 'data/portfolio.csv'
-start = time()
-f = open(file_name, 'rt')
-data = f.read()
-f.close()
-data
-duration = time() - start
-print(data, duration)
-duration = time() - start
-print(duration)
+# path = os.getcwd()
+# file_name = path + '/' + 'data/portfolio.csv'
+# start = time()
+# f = open(file_name, 'rt')
+# data = f.read()
+# f.close()
+# data
+# duration = time() - start
+# print(data, duration)
+# duration = time() - start
+# print(duration)
 
 
 # start = time()
@@ -32,13 +32,19 @@ class file_control():
                 data.append(line)
         return data
 
+    # def headers(data):
+    #     headers = next(data)
+    #     return headers
+
     def print(data):
         for d in data:
             print(d)
 
 
 data = file_control.file_open('data/dowstocks.csv')
+# header = file_control.headers(data)
 file_control.print(data)
+
 
 
 
