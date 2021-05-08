@@ -5,4 +5,7 @@ def avg_numbers(*args):
     return result / len(args)
 
 avg = avg_numbers(1,2,3,4,250005)
-print(avg)
+print('avg = avg_numbers(1,2,3,4,250005)', avg)
+l = (1,3,5,7,9,11,13,15,17,19,20)
+avg = avg_numbers(l)
+print('l = [1,3,5,7,9,11,13,15,17,19,20]', avg)
