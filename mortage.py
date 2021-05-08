@@ -13,15 +13,21 @@ print(f'{h[0]:>5s} {h[1]:>12s} {h[2]:>12s} {h[3]:>12s} {h[4]:>12s} {h[5]:>12s} {
 while principal > 0:
     month +=1
     monthly_rate = principal * rate / 12
-    monthly_paid = payment - monthly_rate
-    if month > 60:
-        principal = principal * (1+rate/12) - payment - extra_payment
-        total_paid = total_paid + payment + extra_payment
-        print(f'{month:>5d} {principal+monthly_paid:>12.2f} {monthly_paid:>12.2f} {monthly_rate:>12.2f} {monthly_paid+monthly_rate:>13.2f} {total_paid:>12.2f} {principal:>16.2f}')
+    if principal > payment + extra_payment:
+        if month > 60:
+            principal = principal * (1+rate/12) - payment - extra_payment
+            monthly_paid = payment + extra_payment - monthly_rate
+            total_paid += payment + extra_payment
+            print(f'{month:>5d} {principal+monthly_paid:>12.2f} {monthly_paid:>12.2f} {monthly_rate:>12.2f} {monthly_paid+monthly_rate:>13.2f} {total_paid:>12.2f} {principal:>16.2f}')
 
+        else:
+            principal = principal * (1+rate/12) - payment
+            monthly_paid = payment - monthly_rate
+            total_paid += payment
+            print(f'{month:>5d} {principal+monthly_paid:>12.2f} {monthly_paid:>12.2f} {monthly_rate:>12.2f} {monthly_paid+monthly_rate:>13.2f} {total_paid:>12.2f} {principal:>16.2f}')
     else:
-        principal = principal * (1+rate/12) - payment
-        total_paid = total_paid + payment
+        monthly_paid = principal - monthly_rate
+        total_paid += principal + monthly_rate
+        principal = 0
         print(f'{month:>5d} {principal+monthly_paid:>12.2f} {monthly_paid:>12.2f} {monthly_rate:>12.2f} {monthly_paid+monthly_rate:>13.2f} {total_paid:>12.2f} {principal:>16.2f}')
-
 print('Total paid', f'{total_paid:>12.2f}')
