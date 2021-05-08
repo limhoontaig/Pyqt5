@@ -11,8 +11,9 @@ while tot_bills * bill_thickness < sears_height:
     day = day + 1
     num_bills = num_bills * 2
     tot_bills += num_bills
-
-print('Number of days       ', day)
-print('Number of bills      ', num_bills)
-print('Total Number of bills', tot_bills)
-print('Final height         ', tot_bills * bill_thickness)
+print('---------------------------- ----------')
+print('Number of days             :', f'{day:>10d}')
+print('Number of bills of last day:', f'{num_bills:>10d}')
+print('Total Number of bills      :', f'{tot_bills:>10d}')
+print('Final height               :', f'{tot_bills * bill_thickness:>10.2f}')
+print('**************************** **********')
