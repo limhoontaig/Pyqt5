@@ -16,6 +16,12 @@ print(f'{h[0]:>5s} {h[1]:>12s} {h[2]:>12s} {h[3]:>12s} {h[4]:>12s} {h[5]:>12s} {
 while principal > 0:
     month +=1
     monthly_rate = principal * rate / 12
+    if principal * rate / 12 >=payment:
+        print('원금 이자는 ' + str(monthly_rate) + '원으로 상환 예정금액 ' + str(payment) + '원으로는 계약이 되지 않습니다. 상환금액을 올려야만 계약이 가능합니다.')
+        break
+    else:
+        pass
+
     if principal > payment + extra_payment:
         if month >= extra_payment_start_month and month <= extra_payment_end_month:
             principal = principal * (1+rate/12) - payment - extra_payment
