@@ -11,7 +11,7 @@ monthly_paid = 0
 total_paid = 0.0
 month = 0
 h = ['month','principal','monthly_paid','monthly_rate','monthly_total','total_paid','remain_principal']
-print(f'{h[0]:>5s} {h[1]:>12s} {h[2]:>12s} {h[3]:>12s} {h[4]:>12s} {h[5]:>12s} {h[6]:>12s}')
+f'{h[0]:>5s} {h[1]:>12s} {h[2]:>12s} {h[3]:>12s} {h[4]:>12s} {h[5]:>12s} {h[6]:>12s}'
 
 while principal > 0:
     month +=1
@@ -39,4 +39,4 @@ while principal > 0:
         total_paid += principal + monthly_rate
         principal = 0
         print(f'{month:>5d} {principal+monthly_paid:>12.2f} {monthly_paid:>12.2f} {monthly_rate:>12.2f} {monthly_paid+monthly_rate:>13.2f} {total_paid:>12.2f} {principal:>16.2f}')
-print('Total paid', f'{total_paid:>12.2f}')
+print(f'Total paid : {total_paid:>0.2f}')
