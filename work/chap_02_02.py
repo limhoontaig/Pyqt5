@@ -21,4 +21,4 @@ else:
     filename = 'data/portfolio.csv'
 
 total_list = portfolio_cost(filename)
-print('Total lost :', total_list)
+print('Total list :', total_list)
