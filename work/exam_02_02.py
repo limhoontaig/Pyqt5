@@ -12,6 +12,11 @@ def portfolio_cost(filename):
             'shares' : int(row[1]),
             'price' : float(row[2])
         }
+        
+        items = d.items()
+        print(items)
+        for k, v in d.items():
+            print(k, '=', v)
         try:
             total_cost = d['shares']*d['price']
         except ValueError:
