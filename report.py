@@ -17,14 +17,14 @@ def read_portfolio(filename):
             stock = {
                 'name' : record['name'],
                 'shares' : int(record['shares']),
-                'price' : float(record['price'])
+                'price' : float(record['price']),
             }
             portfolio.append(stock)
 
     return portfolio
 
 # output the report
-
+report = read_portfolio('data/portfolio.csv')
 headers = ('Name', 'Shares', 'Price', 'Change')
 print('%10s %10s %10s %10s' % headers)
 print(('-' * 10 + ' ') * len(headers))
