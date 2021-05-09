@@ -17,6 +17,8 @@ def portfolio_cost(filename):
         except ValueError:
             print('Value Error :', row)
         keys = list(d)
+        for k in d:
+            print(k,'=',d[k])
 
     return total_cost, keys
             
