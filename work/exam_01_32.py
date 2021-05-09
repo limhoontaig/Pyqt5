@@ -17,7 +17,7 @@ def portfolio_cost(filename):
 if len(sys.argv) == 2:
     filename = sys.argv[1]
 else:
-    filename = 'data/missing.csv'
+    filename = 'data/portfolio.csv'
 
 total_cost = portfolio_cost(filename)
 print('Total cost :',total_cost)
