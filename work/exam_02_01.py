@@ -22,4 +22,4 @@ else:
     filename = 'data/portfolio.csv'
 
 total_cost = portfolio_cost(filename)
-print('Total cost :',total_cost)
+print('Total cost :',f'{total_cost:10,.2f}')
