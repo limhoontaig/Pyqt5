@@ -12,13 +12,13 @@ def portfolio_cost(filename):
             'shares' : int(row[1]),
             'price' : float(row[2])
         }
-        print(d)
         try:
             total_cost = d['shares']*d['price']
         except ValueError:
             print('Value Error :', row)
+        keys = list(d)
 
-    return total_cost
+    return total_cost, keys
             
 if len(sys.argv) == 2:
     filename = sys.argv[1]
@@ -26,4 +26,5 @@ else:
     filename = 'data/portfolio.csv'
 
 total_cost = portfolio_cost(filename)
-print('Total cost :',f'{total_cost:10,.2f}')
+print('Total cost :',f'{total_cost[0]:10,.2f}')
+print('Keys :', total_cost[1])
