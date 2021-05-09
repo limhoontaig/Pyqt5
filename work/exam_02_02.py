@@ -17,10 +17,12 @@ def portfolio_cost(filename):
         except ValueError:
             print('Value Error :', row)
         keys = list(d)
+        keys1 = []
         for k in d:
-            print(k,'=',d[k])
+            keys1.append(k)
+        keys2 = d.keys()
 
-    return total_cost, keys
+    return total_cost, keys, keys1, keys2
             
 if len(sys.argv) == 2:
     filename = sys.argv[1]
@@ -29,4 +31,6 @@ else:
 
 total_cost = portfolio_cost(filename)
 print('Total cost :',f'{total_cost[0]:10,.2f}')
-print('Keys :', total_cost[1])
+print('keys = list(d):',total_cost[1])
+print('for keys1 in d:', total_cost[2])
+print('keys2 = d.keys():',total_cost[3])
