@@ -5,7 +5,10 @@ with open('data/portfolio.csv', 'rt') as f:
     print(headers)
     for line in f:
         row = line.split(',')
-        total_cost += int(row[1])*float(row[2])
-        print(row, end='')
+        try:
+            total_cost += int(row[1])*float(row[2])
+            print(row, end='')
+        except ValueError:
+            print("Couldn't Parse", line)
     print()
     print(total_cost)
