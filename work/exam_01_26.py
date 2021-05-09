@@ -1,7 +1,8 @@
 with open('data/portfolio.csv', 'rt') as f:
-    headers = next(f)
+    headers = next(f).split(',')
     print(headers)
     for line in f:
-       print(line, end='')
+        row = line.split(',')
+        print(row, end='')
 
 
