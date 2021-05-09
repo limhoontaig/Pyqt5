@@ -14,7 +14,7 @@ h = ['month','principal','monthly_paid','monthly_rate','monthly_total','cumulati
 print(f'{h[0]:>5s} {h[1]:>12s} {h[2]:>12s} {h[3]:>12s} {h[4]:>12s} {h[5]:>12s} {h[6]:>12s}')
 
 def data_print():
-    print(f'{month:>5d} {principal+monthly_paid:>12,.2f} {monthly_paid:>12,.2f} {monthly_rate:>12,.2f} {monthly_paid+monthly_rate:>13,.2f} {total_paid:>15,.2f} {principal:>16,.2f}')
+    print(f'{month:>5d} {principal+monthly_paid:>12,.2f} {monthly_paid:>12,.2f} {monthly_rate:>12,.2f} {monthly_paid+monthly_rate:>13,.2f} {total_paid:>15,.2f} {principal:*>16,.2f}')
     return
 
 
