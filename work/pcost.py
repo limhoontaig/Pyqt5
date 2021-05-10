@@ -12,6 +12,7 @@ def portfolio_cost(filename):
     for row in rows:
         try:
             total_cost += int(row[1])*float(row[2])
+            print(row)
         except ValueError:
             print("Couldn't Parse", row)
     return(total_cost)
