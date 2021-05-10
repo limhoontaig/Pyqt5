@@ -17,7 +17,10 @@ def read_portfolio(filename):
             'price' : float(row[2])
         }            
         portfolio.append(holding)
-    return(portfolio)
+    total = 0
+    for s in portfolio:
+        total += s['shares']*s['price']
+    return(portfolio, total)
 
 if len(sys.argv) == 2:
     filename = sys.argv[1]
@@ -25,5 +28,6 @@ else:
     filename = 'data/portfolio.csv'
 
 portfolio = read_portfolio(filename)
-print('Total list :',portfolio)
+print('Total list :',portfolio[0])
+print('Total cost :', portfolio[1])
         
