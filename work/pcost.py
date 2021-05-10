@@ -1,6 +1,7 @@
 # C:\source\PyQt5\work\pcost.py
 
 import csv
+import sys
 
 def portfolio_cost(filename):
 
@@ -17,7 +18,11 @@ def portfolio_cost(filename):
             print("Couldn't Parse", row)
     return(total_cost)
 
-cost = portfolio_cost('data/portfolio.csv')
-print('Total cost :',cost)
+if len(sys.argv) == 2:
+    filename = sys.argv[1]
+else:
+    filename = 'data/portfolio.csv'
 
+total_cost = portfolio_cost(filename)
+print('Total cost :',total_cost)
         
