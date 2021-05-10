@@ -1,3 +1,5 @@
+# E:\source\pyqt5\work\exam_02_02.py
+
 import sys
 import csv
 
