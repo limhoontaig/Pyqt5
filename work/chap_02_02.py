@@ -1,3 +1,4 @@
+# chap 2.2 create a list from a data file
 import sys
 import csv
 
