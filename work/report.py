@@ -1,7 +1,6 @@
 # C:\source\PyQt5\work\pcost.py
 
 import csv
-import sys
 
 def read_portfolio(filename):
 
@@ -11,23 +10,18 @@ def read_portfolio(filename):
     rows = csv.reader(f)
     headers = next(rows)
     for row in rows:
-        holding = {
-            'name':row[0],
-            'shares': int(row[1]),
-            'price' : float(row[2])
-        }            
+        holding = (row[0], int(row[1]), float(row[2]))
         portfolio.append(holding)
-    total = 0
-    for s in portfolio:
-        total += s['shares']*s['price']
-    return(portfolio, total)
+    return(portfolio)
 
-if len(sys.argv) == 2:
-    filename = sys.argv[1]
-else:
-    filename = 'data/portfolio.csv'
+def total_cost(portfolio):
+    
+    total = 0 
+    for name, shares, price in portfolio:
+        total += shares * price
+    return total
 
-portfolio = read_portfolio(filename)
-print('Total list :',portfolio[0])
-print('Total cost :', portfolio[1])
-        
+
+portfolio = read_portfolio('data/portfolio.csv')
+total = total_cost(portfolio)
+print(total)
