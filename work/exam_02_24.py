@@ -14,8 +14,7 @@ def read_portfolio(filename):
     converted_list = []
     for row in rows:
         converted = []
-        for func, val in zip(types, row):
-            converted.append(func(val))
+        converted = [func(val) for func, val in zip(types, row)]
         converted_list.append(converted)
     return converted_list
 
