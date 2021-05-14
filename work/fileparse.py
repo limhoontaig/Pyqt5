@@ -39,5 +39,5 @@ def parse_csv(filename, select=None, types=None, has_headers=True, delimiter=','
 
     return records
 
-# portfolio = parse_csv('data/portfolio.csv', types=[str, int, float], delimiter=',')
-# print(portfolio)
+portfolio = parse_csv('data/portfolio.csv', types=[str, int, float], delimiter=',')
+print(portfolio)
