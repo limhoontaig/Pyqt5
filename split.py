@@ -1,6 +1,8 @@
-def split(x):
-    splited = x.split(".")
+def split(text,splitter):
+    splited = text.split(splitter)
     return splited
 
-y = split("naver.com")
-print(y)
+splitter = '.'
+text = 'commercial.naver.com'
+y = split(text, splitter)
+print(y[-2])
