@@ -1,7 +1,7 @@
 # E:\source\pyqt5\sears.py
 
 bill_thickness = 0.11 * 0.001    # Meters (0.11 mm)
-sears_height   = 442             # Height (meters)
+sears_height   = 542             # Height (meters)
 num_bills      = 1
 tot_bills = 1
 day            = 1
