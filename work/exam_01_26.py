@@ -1,4 +1,4 @@
-with open('data/portfolio.csv', 'rt') as f:
+with open('./work/data/portfolio.csv', 'rt') as f:
     headers = next(f).split(',')
     print(headers)
     for line in f:
